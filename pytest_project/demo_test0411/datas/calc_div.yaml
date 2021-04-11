@@ -1,0 +1,6 @@
+int_datas:
+  - [ 0.1, 0, False ]
+  - [ 4, 2, 2 ]
+ids:
+  - 'div_one'
+  - 'div_two'

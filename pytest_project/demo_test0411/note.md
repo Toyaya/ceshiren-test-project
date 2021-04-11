@@ -8,7 +8,7 @@ except Exception:( except ZeroDivisionError(除数等于0的报错方式):)
 ####2、yaml：
 - yaml.safe_load()读取yaml文件
 
-####3、fixture：
+####3、fixture：(前置)
 - def login()添加装饰器@pytest.fixture()，实现参数化@pytest.fixture(params=[])
 - ①<可以拿到返回数据>在测试用例def test_add_card(login)增加需要进行前置条件的函数
 - ②@pytest.mark.usefixtures('login)
@@ -38,8 +38,20 @@ except Exception:( except ZeroDivisionError(除数等于0的报错方式):)
 - pip install pytest-random-order  用例随机执行
 - pip intall  pytest-html                    测试报告 
 
+- 内置插件：pytest内置的 hook 函数
+- 外部插件: 通过pip 安装的插件
+- 本地插件: fixture 自定义的插件内容，放在 conftest.py 文件中，pytest 会自动的发现这些插件
+
 ####6、pytest hook 函数
 - 常用的hook 介绍
 - pytest_collection_modifyitems
 - item.name = item.name.encode('utf-8').decode('unicode-escape')
 - item._nodeid = item.nodeid.encode('utf-8').decode('unicode-escape')
+
+####7、allure
+- 给测试用例分类
+- @allure.feature()
+- @allure.story()
+
+#####生成 allure 测试结果 ：ppytest --alluredir ./result
+#####展示报告：allure serve ./result
