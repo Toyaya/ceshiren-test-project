@@ -53,5 +53,5 @@ except Exception:( except ZeroDivisionError(除数等于0的报错方式):)
 - @allure.feature()
 - @allure.story()
 
-#####生成 allure 测试结果 ：ppytest --alluredir ./result
+#####生成 allure 测试结果 ：pytest --alluredir ./result
 #####展示报告：allure serve ./result

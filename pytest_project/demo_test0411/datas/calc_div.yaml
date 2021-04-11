@@ -1,6 +1,14 @@
 int_datas:
   - [ 0.1, 0, False ]
   - [ 4, 2, 2 ]
+  - [0, 1, 0]
+  - [0, -1, 0]
+  - [10, -2, -5]
+  - [-10, 2, -5]
 ids:
   - 'div_one'
   - 'div_two'
+  - 'div_three'
+  - 'div_four'
+  - 'div_five'
+  - 'div_six'

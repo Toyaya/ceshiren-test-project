@@ -1,6 +1,10 @@
 int_datas:
   - [ 0.1, 0.1, 0.2 ]
   - [ 1.2,1.2,2.4 ]
+  - [-0.5, -0.5, -1]
+  - [-0.5, 1, 0.5]
 ids:
   - 'float_one'
   - 'float_two'
+  - 'float_three'
+  - 'float_four'

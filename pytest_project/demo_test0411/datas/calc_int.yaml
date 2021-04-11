@@ -4,7 +4,11 @@ int_datas:
     - 2
   - [ 100, 200, 300 ]
   - [ 10000,20000,30000 ]
+  - [10, -1, 9]
+  - [-10, -1, -11]
 ids:
   - 'int_one'
   - 'int_two'
   - 'int_three'
+  - 'int_four'
+  - 'int_five'
