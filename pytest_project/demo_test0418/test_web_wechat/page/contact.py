@@ -8,6 +8,8 @@ class ContactPage(BasePage):
 
     __ele_addparty_top = (By.CSS_SELECTOR, ".member_colLeft_top_addBtn")
     __ele_addparty = (By.CSS_SELECTOR, ".js_create_party")
+    __ele_party_name = (By.CSS_SELECTOR, '.jstree-anchor')
+    __index = (By.ID,'menu_index')
 
     def get_contact_list(self):
         # 获取的是元素列表
@@ -30,10 +32,13 @@ class ContactPage(BasePage):
 
     def check_party(self):
         # 每次调用前刷新界面，确保获取最新的页面数据
-        self.driver.refresh()
         # 获取当前部门名称
+        self.driver.implicitly_wait(10)
         party_name = self.find_all(self.__ele_party_name)
-        dp_name_list = [i.text for i in party_name]
-        return dp_name_list
+        print(party_name)
+        party_name_list = [i.text for i in party_name]
+        print(party_name_list)
+        self.find(self.__index).click()
+        return party_name_list
 
 

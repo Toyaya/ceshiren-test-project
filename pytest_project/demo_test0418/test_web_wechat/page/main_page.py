@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from .add_member import AddMemberPage
 from .base_page import BasePage
 from  .contact import ContactPage
+from .add_address import AddAddress
 
 
 
@@ -28,4 +29,8 @@ class MainPage(BasePage):
 
         self.driver.find_element(By.CSS_SELECTOR, ".ww_indexImg_AddMember").click()
         return AddMemberPage(self.driver)
+
+    def goto_upload_member(self):
+        self.driver.find_elements(By.CSS_SELECTOR, ".index_service_cnt_item")[1].click()
+        return AddAddress(self.driver)
 

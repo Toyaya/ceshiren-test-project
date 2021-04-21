@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from .base_page import BasePage
-from .add_address import AddAddress
+# from .add_address import AddAddress
+
 
 class AddPartyPage(BasePage):
 
@@ -10,13 +11,14 @@ class AddPartyPage(BasePage):
     __confirm = (By.CSS_SELECTOR, '.ww_dialog_foot .ww_btn_Blue')
 
 
-    def add_department(self,name):
+    def add_party(self,name):
+        from .contact import ContactPage
         self.find(self.__party_name).send_keys(name)
         self.driver.implicitly_wait(10)
         self.find(self.__party_select_btn).click()
         self.find(self.__party_select_item).click()
         self.find(self.__confirm).click()
-        return AddAddress(self.driver)
+        return ContactPage(self.driver)
 
 
 
