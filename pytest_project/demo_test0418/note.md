@@ -26,3 +26,5 @@
 - 每条线的结束段， 代表页面返回的对象/ 返回的断言信息
 
 #####链式调用
+
+$(".member_colRight_memberTable_td:nth-child(2)")

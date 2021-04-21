@@ -1,18 +1,17 @@
-import time
-
-from selenium import webdriver
 from selenium.webdriver.common.by import By
+from .base_page import BasePage
+from .contact import ContactPage
 
-from test_web_wechat.page.base_page import BasePage
-from test_web_wechat.page.contact import ContactPage
+
+
 
 
 class AddMemberPage(BasePage):
     # 设定为元祖
     # 页面元素不需要让 业务用例了解，所以要加私有
     __ele_username = (By.ID, "username")
-    ele_accid = (By.ID, "memberAdd_acctid")
-    ele_phone = (By.ID, "memberAdd_phone")
+    __ele_accid = (By.ID, "memberAdd_acctid")
+    __ele_phone = (By.ID, "memberAdd_phone")
 
     def add_member(self, username, accid, phone):
         # * 的作用是 解元祖 self.driver.find_element(*username) 等同于
@@ -20,8 +19,8 @@ class AddMemberPage(BasePage):
 
         # self.driver.find_element(*self.__ele_username).send_keys(username)
         self.find(self.__ele_username).send_keys(username)
-        self.driver.find_element(*self.ele_accid).send_keys(accid)
-        self.driver.find_element(*self.ele_phone).send_keys(phone)
+        self.driver.find_element(*self.__ele_accid).send_keys(accid)
+        self.driver.find_element(*self.__ele_phone).send_keys(phone)
         self.driver.find_element(By.CSS_SELECTOR, ".js_btn_save").click()
         # 页面的return 分成两个部分
         # 1. 其他页面的 实例

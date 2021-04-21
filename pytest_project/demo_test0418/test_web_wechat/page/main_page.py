@@ -1,11 +1,7 @@
-from time import sleep
-
-import yaml
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-
-from test_web_wechat.page.add_member import AddMemberPage
-from test_web_wechat.page.base_page import BasePage
+from .add_member import AddMemberPage
+from .base_page import BasePage
+from  .contact import ContactPage
 
 
 
@@ -13,13 +9,15 @@ class MainPage(BasePage):
     """
     用公共方法代表UI所提供的功能
     """
+    # __ele_contact = (By.ID, "menu_contacts")
 
     def goto_contact(self):
         """
         跳转到通讯录页面
         :return:
         """
-        pass
+        self.driver.find_element(By.ID, "menu_contacts").click()
+        return ContactPage(self.driver)
 
     def goto_add_member(self):
         """
