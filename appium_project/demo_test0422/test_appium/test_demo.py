@@ -24,28 +24,28 @@ class TestWX:
 
 
 
-    def test_daka(self):
-        # 测试用例
-        self.driver.find_element(MobileBy.XPATH, "//*[@text='工作台']").click()
-        # 强制等待
-        # sleep(5)
-        # uiautomator的定位方式，android 原生的定位方式，滚动查找某个 文字
-        self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
-                                 'new UiScrollable(new UiSelector()'
-                                 '.scrollable(true).instance(0)).'
-                                 'scrollIntoView(new UiSelector().'
-                                 'text("打卡").instance(0));').click()
-        # self.driver.update_settings({'waitForIdleTimeout':0})
-        self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡']").click()
-        self.driver.find_element(MobileBy.XPATH, "//*[contains(@text, '次外出')]").click()
-        self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡成功']")
+    # def test_daka(self):
+    #     # 测试用例
+    #     self.driver.find_element(MobileBy.XPATH, "//*[@text='工作台']").click()
+    #     # 强制等待
+    #     # sleep(5)
+    #     # uiautomator的定位方式，android 原生的定位方式，滚动查找某个 文字
+    #     self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
+    #                              'new UiScrollable(new UiSelector()'
+    #                              '.scrollable(true).instance(0)).'
+    #                              'scrollIntoView(new UiSelector().'
+    #                              'text("打卡").instance(0));').click()
+    #     # self.driver.update_settings({'waitForIdleTimeout':0})
+    #     self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡']").click()
+    #     self.driver.find_element(MobileBy.XPATH, "//*[contains(@text, '次外出')]").click()
+    #     self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡成功']")
 
     def test_add(self):
         self.driver.find_element(MobileBy.XPATH, "//*[@text='通讯录']").click()
         self.driver.find_element(MobileBy.XPATH, "//*[@text='添加成员']").click()
         self.driver.find_element(MobileBy.XPATH, "//*[@text='手动输入添加']").click()
-        self.driver.find_element(MobileBy.ID,"com.tencent.wework:id/ays").send_keys("砂糖")
-        self.driver.find_element(MobileBy.XPATH, "//*[@text='必填']").send_keys("13772127676")
+        self.driver.find_element(MobileBy.ID,"com.tencent.wework:id/ays").send_keys("砂糖1")
+        self.driver.find_element(MobileBy.ID, "com.tencent.wework:id/f4m").send_keys("13772127771")
         self.driver.find_element(MobileBy.XPATH, "//*[@text='保存']").click()
 
 
