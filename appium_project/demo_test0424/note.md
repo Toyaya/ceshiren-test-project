@@ -1,7 +1,8 @@
 #####元素定位
 
 '''
-//*代表任何字符
+//*代表任何字符，相对定位，找子孙节点
+/绝对定位，只找子节点
 '''
 - 测试步骤三要素：
   - 定位、交互、断言
@@ -52,4 +53,18 @@
   - 例如：
 
   - name == '测试'
+  
+  
+#####Toast 定位:
+- appium使用uiautomator底层的机制来分析抓取toast，并且把toast放到控件树里面，但本身并不属于控件。
+
+- automationName：uiautomator2
+
+- 使用xpath查找
+
+  - //*[@class='android.widget.Toast']
+
+  - //*[contains(@text, "xxxxx")]
+  
+//*[contains(@text,'姓名']/../*[@text='必填  ']:/../代表向上找父节点再找子节点
 
