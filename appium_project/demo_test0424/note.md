@@ -75,3 +75,21 @@ fake.phone_number()
 
 #####ecxept---NoSuchElementException:未找到元素
 #####raise手动抛出异常
+
+#####PO模式主要组成元素
+- Page对象：完成对页面的封装
+- Driver对象：完成对web、android、ios、接口的驱动
+- 测试用例：调用Page对象实现业务并断言
+- 数据封装：配置文件和数据驱动
+- Utils：其他功能封装，改进原生框架不足
+
+#####传给类一个参数，用init方法接收
+#####logging.baseConfig(level=logging.DEBUG)加入日志
+
+
+#####start_activity（packagename，activityname）启动页面，可以运行过程中启动其他app或者当前app的其他页面
+#####launch_app启动driver包含的app
+#####close_app关闭应用
+#####quit退出app，杀掉session，销毁driver
+
+
