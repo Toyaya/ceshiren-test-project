@@ -68,3 +68,10 @@
   
 //*[contains(@text,'姓名']/../*[@text='必填  ']:/../代表向上找父节点再找子节点
 
+#####faker动态生成数据
+fake = Faker('zh-CN')
+fake.name()随机生成一个姓名
+fake.phone_number()
+
+#####ecxept---NoSuchElementException:未找到元素
+#####raise手动抛出异常
