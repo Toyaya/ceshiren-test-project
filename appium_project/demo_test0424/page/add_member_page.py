@@ -1,7 +1,8 @@
 from appium.webdriver.common.mobileby import MobileBy
-from appium.webdriver.webdriver import WebDriver
-
 from .base_page import BasePage
+from selenium.webdriver.support.wait import WebDriverWait
+from time import sleep
+
 
 
 class AddMemberPage(BasePage):
@@ -14,5 +15,18 @@ class AddMemberPage(BasePage):
         return EditMemberPage(self.driver)
 
     def find_toast(self):
-        self.find(MobileBy.XPATH, "//*[@text='添加成功']")
-        # return True
+        # self.driver.implicitly_wait(5)
+        toast = self.find(MobileBy.XPATH, "//*[@text='添加成功']")
+        return toast.text
+
+    def back_contactlist(self):
+        def wait(x):
+            return len(self.finds(MobileBy.XPATH, "//*[@text='添加成员']/../../../../android.widget.TextView")) >= 1
+
+        WebDriverWait(self.driver, 10).until(wait)
+        self.find(MobileBy.XPATH, "//*[@text='添加成员']/../../../../android.widget.TextView").click()
+
+
+
+
+

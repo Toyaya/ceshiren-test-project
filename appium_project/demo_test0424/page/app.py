@@ -14,7 +14,7 @@ class App(BasePage):
             caps["platformName"] = "android"
             caps["appPackage"] = "com.tencent.wework"
             caps["appActivity"] = ".launch.LaunchSplashActivity"
-            caps["deviceName"] = "hogwarts"
+            caps["deviceName"] = "bf090a1c"
             caps["settings[waitForIdleTimeout]"] = 0
             # caps['dontStopAppOnReset'] = True
             caps["noReset"] = "true"

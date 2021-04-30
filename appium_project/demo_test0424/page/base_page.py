@@ -14,9 +14,14 @@ class BasePage:
     def find(self, by, value):
         logging.info(by)
         logging.info(value)
-
         # 查找元素
         return self.driver.find_element(by, value)
+
+    def finds(self,by,value):
+        logging.info(by)
+        logging.info(value)
+        return self.driver.find_elements(by, value)
+
 
     def swipe_find(self, text, num=5):
         # num : 默认查找次数
@@ -39,10 +44,10 @@ class BasePage:
                 height = size['height']
                 # 'width', 'height'
                 start_x = width / 2
-                start_y = height * 0.8
+                start_y = height * 0.9
 
                 end_x = start_x
-                end_y = height * 0.3
+                end_y = height * 0.2
 
                 duration = 2000  # ms
                 # 完成滑动操作
