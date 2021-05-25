@@ -1,4 +1,4 @@
-from service.wework_api import WeWork
+from service.demo_test0520.wework_api import WeWork
 
 
 class TestWeWork:
