@@ -24,7 +24,7 @@ class WeWork(BaseApi):
             'method': 'get',
             "params": {
                 "corpid": "ww6ce86bcfb747cf03",
-                "corpsecret": "6aR7ZF7U3I2--0wlE0Qp3f-fqM7QH3yr850Zx5_X0g4"
+                "corpsecret": "eMUtspoLwFLpNQcRh9Mbe8U-S1URx6-w_pK1lg4bi44"
             }
         }
         r = self.request(data)
@@ -34,7 +34,7 @@ class WeWork(BaseApi):
         return self.token
         # print(self.token)
 
-# if __name__ == '__main__':
-#     we = WeWork()
-#     we.get_token()
+if __name__ == '__main__':
+    we = WeWork()
+    we.get_token()
 
