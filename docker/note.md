@@ -14,3 +14,13 @@ docker exec -it chrome bash #登录到容器里的命令，docker exec让docker�
 #####--link 换成 -e
 #####docker让所有的容器共享宿主机的内核，docker运行在lunix
 #####网络模式：-p （桥接模式），  --net=host（容器使用宿主机的网络模式）  ， --net=container:B A（容器A使用容器B的网络）
+
+######容器隔离：
+- 名称空间隔离（网络名称，进程名称，Mount名称，用户名称<docker不隔离>，ITC进程通讯，Time名称空间）
+
+######解释容器桥接网络？？(https://testerhome.com/topics/9567)
+######https://testerhome.com/ycwdaaaa
+######https://testerhome.com/topics/16605
+######dockerfile理解成制作镜像的脚本
+######（面试题）一个run指令就是一层，每多一层就会多一个IO的性能开销。调试中dockerfile用多个run，开发完成后一个run
+######docker build命令用于使用 Dockerfile 创建镜像
