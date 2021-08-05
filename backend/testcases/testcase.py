@@ -15,8 +15,8 @@ class TestCase:
         :return:
         """
 
-        # r = requests.get(self.base_url)
-        r = requests.get(self.base_url, params={"id": 1})
+        r = requests.get(self.base_url)
+        # r = requests.get(self.base_url, params={"id": 1})
         print(r.json())
         assert r.status_code == 200
 
@@ -28,7 +28,7 @@ class TestCase:
         """
         # 添加的用例数据
         # data = {"id": 1, "nodeid":"node111", "remark": "备注1"}
-        data2 = {"id": 3, "nodeid":["node1", "node2"], "remark": "备注3"}
+        data2 = {"nodeid": "xxxx", "remark": "备注3"}
         r = requests.post(self.base_url, json=data2)
         # 测试数据库
         assert r.status_code == 200
@@ -49,11 +49,11 @@ class TestCase:
         测试删除用例
         :return:
         """
-        r = requests.delete(self.base_url)
-        print(r.json())
-        assert r.json()["error"] == 40001
-        assert r.status_code == 200
-        r = requests.delete(self.base_url, params = {"id": 2})
+        # r = requests.delete(self.base_url)
+        # print(r.json())
+        # assert r.json()["error"] == 40001
+        # assert r.status_code == 200
+        r = requests.delete(self.base_url, params = {"id": 3})
         print(r.json())
         assert r.status_code == 200
 
