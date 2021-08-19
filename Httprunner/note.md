@@ -4,6 +4,7 @@
 
 #####.with_jmespath("body.data.list.0.id","id")   参数化关联：把提取出来的值 命名为id。 后续通过$id来引用。和.extract().with_jmespath
 #####.with_jmespath("cookie.Jwt-Token","token") jmespath不支持-（短线）。需要写成.with_jmespath('cookie."Jwt-Token"',"token")
+"${fuction()}"引用debugtalk里的函数
 
 ```
 calss TestCaseXx(HttpRunner):
