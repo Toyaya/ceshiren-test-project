@@ -3,6 +3,8 @@
 ##### har2case mulu/xxx.har -2y 生出yaml格式
 
 #####.with_jmespath("body.data.list.0.id","id")   参数化关联：把提取出来的值 命名为id。 后续通过$id来引用。和.extract().with_jmespath
+#####.with_jmespath("cookie.Jwt-Token","token") jmespath不支持-（短线）。需要写成.with_jmespath('cookie."Jwt-Token"',"token")
+
 ```
 calss TestCaseXx(HttpRunner):
   
