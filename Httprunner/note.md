@@ -29,7 +29,7 @@ calss TestCaseXx(HttpRunner):
   .with_jmespath("body.data.list.0.id","id") 
   .validate()#校验
   .assert_equal("status_code",200)
-  .teardown_hook("${function()}","")
+  .teardown_hook("${function()}","return_value")#后置处理，运行一个函数，把返回值赋值
     
 )
 ]
