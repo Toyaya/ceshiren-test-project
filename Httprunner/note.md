@@ -34,4 +34,6 @@ calss TestCaseXx(HttpRunner):
 
 
 ```
-
+#####.with_variables(**{
+  "name":"toya"
+})   定义局部变量
