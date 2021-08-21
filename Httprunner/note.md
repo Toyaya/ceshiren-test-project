@@ -24,9 +24,12 @@ calss TestCaseXx(HttpRunner):
   )
   .with_json({json})
   .extract() #从相应里面提取东西
+  .with_variables(**{
+  "name":"toya"})   #定义局部变量
   .with_jmespath("body.data.list.0.id","id") 
   .validate()#校验
   .assert_equal("status_code",200)
+  .teardown_hook("${function()}","")
     
 )
 ]
@@ -34,6 +37,4 @@ calss TestCaseXx(HttpRunner):
 
 
 ```
-#####.with_variables(**{
-  "name":"toya"
-})   定义局部变量
+
