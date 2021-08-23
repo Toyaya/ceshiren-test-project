@@ -35,7 +35,9 @@ calss TestCaseXx(HttpRunner):
 )
 ]
 
-
-
 ```
+#####查看测试报告
+- 默认pytest  hrun har/login.yml --html=login.html
+- allure报告：①安装：pip install "httprunner[allure]" 或者 pip install allure-pytest ②运行：hrun testcase --alluredir=allurereports/ ; allure serve allurereports
+
 
