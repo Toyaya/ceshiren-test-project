@@ -5,7 +5,8 @@
 #####.with_jmespath("body.data.list.0.id","id")   参数化关联：把提取出来的值 命名为id。 后续通过$id来引用。和.extract().with_jmespath
 #####.with_jmespath("cookie.Jwt-Token","token") jmespath不支持-（短线）。需要写成.with_jmespath('cookie."Jwt-Token"',"token")
 "${fuction()}"引用debugtalk里的函数
-#####.export()输出,方便其他用例引用  .call()  
+#####.export()输出,方便其他用例引用 。作用域为当前py文件
+.call()时，传参默认为当前py文件的传参
 
 ```
 calss TestCaseXx(HttpRunner):
